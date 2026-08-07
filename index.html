@@ -67,20 +67,20 @@
         </div>
 
         <!-- Botón Menú Móvil (Hamburguesa) -->
-        <button id="menu-btn" class="block md:hidden text-espresso focus:outline-none z-50">
+        <button id="menu-btn" class="block md:hidden text-espresso focus:outline-none z-50 relative">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
-
-        <!-- Menú Desplegable Móvil -->
-        <div id="mobile-menu" class="fixed inset-0 bg-cream flex flex-col items-center justify-center space-y-8 text-lg font-medium uppercase tracking-widest transform translate-x-full transition-transform duration-300 ease-in-out z-40">
-            <a href="#especialidad" class="mobile-link hover:text-rosegold transition-colors">Tricología</a>
-            <a href="#servicios" class="mobile-link hover:text-rosegold transition-colors">Servicios</a>
-            <a href="#boutique" class="mobile-link hover:text-rosegold transition-colors">Boutique</a>
-            <a href="https://wa.me/529611700462?text=Hola!%20Me%20gustaría%20agendar%20una%20cita." target="_blank" class="bg-rosegold text-white px-8 py-3 rounded-full mt-4 shadow-lg">
-                Agendar Cita
-            </a>
-        </div>
     </nav>
+
+    <!-- Menú Desplegable Móvil (Afuera del nav para evitar el bug del backdrop-blur) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-cream flex flex-col items-center justify-center space-y-8 text-lg font-medium uppercase tracking-widest transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+        <a href="#especialidad" class="mobile-link hover:text-rosegold transition-colors pt-12">Tricología</a>
+        <a href="#servicios" class="mobile-link hover:text-rosegold transition-colors">Servicios</a>
+        <a href="#boutique" class="mobile-link hover:text-rosegold transition-colors">Boutique</a>
+        <a href="https://wa.me/529611700462?text=Hola!%20Me%20gustaría%20agendar%20una%20cita." target="_blank" class="bg-rosegold text-white px-8 py-3 rounded-full mt-4 shadow-xl">
+            Agendar Cita
+        </a>
+    </div>
 
     <!-- 1. Hero Section -->
     <header class="hero-bg h-[100svh] flex flex-col justify-center items-center text-center px-4 pt-20">
@@ -251,7 +251,7 @@
         </div>
     </footer>
 
-    <!-- Botón Flotante de WhatsApp (Especial para Móviles) -->
+    <!-- Botón Flotante de WhatsApp -->
     <a href="https://wa.me/529611700462?text=Hola!%20Me%20gustaría%20agendar%20una%20cita." target="_blank" class="fixed bottom-6 right-6 bg-whatsapp text-white p-3.5 md:p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center animate-bounce group">
         <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12.031 21.122l-3.118.815.823-3.036A9.955 9.955 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-2.031-.212l-.001-.001-.002-.001c-.02-.005-.041-.01-.06-.015l-.014-.003c-.636-.16-1.25-.373-1.834-.636l-.027-.012zM12 4.182c-4.318 0-7.818 3.5-7.818 7.818 0 1.636.514 3.16 1.405 4.414l-1.023 3.773 3.864-1.014A7.77 7.77 0 0 0 12 19.818c4.318 0 7.818-3.5 7.818-7.818S16.318 4.182 12 4.182zm4.182 10.59c-.227-.113-1.34-.659-1.545-.736-.205-.077-.355-.113-.505.113-.15.227-.582.736-.714.886-.132.15-.264.17-.49.057-.227-.113-.955-.352-1.82-1.127-.674-.602-1.13-1.345-1.264-1.572-.132-.227-.014-.35.1-.464.102-.102.227-.264.34-.395.113-.132.15-.227.227-.377.077-.15.038-.282-.02-.395-.057-.113-.505-1.218-.69-1.668-.182-.44-.364-.382-.505-.382h-.43c-.15 0-.395.057-.6.282-.205.227-.782.764-.782 1.864 0 1.1.8 2.164.914 2.314.113.15 1.577 2.414 3.823 3.382.536.232.955.373 1.282.477.536.17 1.023.145 1.41.086.432-.064 1.34-.545 1.532-1.073.19-.527.19-.977.132-1.073-.057-.095-.205-.15-.432-.264z"/>
